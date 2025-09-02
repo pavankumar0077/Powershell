@@ -2,8 +2,7 @@
 # SAVES THE DATA IN EXCEL SHEET WITH DATATIME TIMESTAMP
 # WE WILL GET THE FLAT RESPONSE LIKE data.item will be item no nested json will be saved in sheet
 
-# = API Automation Script (Clean & Simple) =
-# GUI file picker
+# GUI file upload
 function Select-File {
     Add-Type -AssemblyName System.Windows.Forms
     $dlg = New-Object System.Windows.Forms.OpenFileDialog
@@ -90,7 +89,7 @@ $row | Add-Member -NotePropertyName Timestamp -NotePropertyValue (Get-Date) -For
 Write-Host "3. Saving to Excel..." -ForegroundColor Yellow
 if (Test-FileLock $ExcelFile) {
     $target = "API_Response_$(Get-Date -Format 'yyyyMMdd_HHmmss').xlsx"
-    Write-Host "⚠️ Excel is open, saving to $target" -ForegroundColor Yellow
+    Write-Host "Excel is open, saving to $target" -ForegroundColor Yellow
 } else {
     $target = $ExcelFile
 }
@@ -100,6 +99,7 @@ $all = $old + $row
 $all | Export-Excel $target -WorksheetName "Results" -AutoSize -BoldTopRow
 
 Write-Host "✓ Results saved to $target" -ForegroundColor Green
-Write-Host "`nAll done! 🎉" -ForegroundColor Cyan
+Write-Host "`nAll done!" -ForegroundColor Cyan
 
 if ((Read-Host "`nOpen Excel file now? (Y/N)") -match '^(Y|y)$') { Invoke-Item $target }
+
