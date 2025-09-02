@@ -1,4 +1,8 @@
-﻿# === API Automation Script (Clean & Simple) ===
+﻿# This script asks for user input for endpoint and http method and payload and saves the response in excel. each time it creates new excel 
+# File name with data time and hours mins
+# IT SAVES IN DIFFERENT FILES EVERY TIME WHEN WE GET RESPONSE
+
+# === API Automation Script (Clean & Simple) ===
 
 # GUI file picker
 function Select-File {

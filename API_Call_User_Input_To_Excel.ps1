@@ -1,5 +1,5 @@
-﻿# User input endpoint directly in the console or give the file path 
-# User send the payload directly in the console or give the file path
+﻿# User input endpoint directly in the console or give the file path -- HERE WE DON'T HAVE UPLOAD OR BROWSE OPTION WE NEED TO GIVE THE PATH
+# User send the payload directly in the console or give the file path -- HERE WE DON'T HAVE UPLOAD OR BROWSE OPTION WE NEED TO GIVE THE PATH
 
 # Install ImportExcel if not available
 if (-not (Get-Module -ListAvailable -Name ImportExcel)) {

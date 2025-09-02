@@ -1,5 +1,6 @@
 ﻿# User input endpoint directly in the console or upload the file by browsing
 # User send the payload directly in the console or upload the file by browsing
+# HERE BOTH POST REQUEST PAYLOAD AND GET REQUEST RESPONSE WILL BE SAVED
 
 
 # Helper: Open file picker dialog

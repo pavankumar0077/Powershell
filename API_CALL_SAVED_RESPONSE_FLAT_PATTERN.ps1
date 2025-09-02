@@ -1,4 +1,8 @@
-﻿# = API Automation Script (Clean & Simple) =
+﻿# USER INPUT ENDPIONT AND PAYLOAD CAN BE GIVEN DIRECTLY TO CONSOLE OR WE CAN UPLOAD THE JSON FILE
+# SAVES THE DATA IN EXCEL SHEET WITH DATATIME TIMESTAMP
+# WE WILL GET THE FLAT RESPONSE LIKE data.item will be item no nested json will be saved in sheet
+
+# = API Automation Script (Clean & Simple) =
 # GUI file picker
 function Select-File {
     Add-Type -AssemblyName System.Windows.Forms
