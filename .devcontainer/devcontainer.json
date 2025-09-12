@@ -1,0 +1,11 @@
+{
+  "name": "Powershell + Docker",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-20.04",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "runArgs": ["--init", "--privileged"],
+  "mounts": [
+    "source=/var/lib/docker,target=/var/lib/docker,type=volume"
+  ]
+}
